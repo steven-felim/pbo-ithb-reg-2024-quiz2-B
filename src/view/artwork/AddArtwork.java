@@ -73,7 +73,7 @@ public class AddArtwork extends JFrame {
             artworks.setImage_path(fcFoto.getSelectedFile().getAbsolutePath());
             artworks.setUser_id(id);
 
-            controller.insertDataToDB(id);
+            controller.insertDataToDB(id, artworks);
         });
 
         this.add(title);

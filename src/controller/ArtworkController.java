@@ -10,8 +10,7 @@ import java.sql.SQLException;
 import java.util.TimeZone;
 
 public class ArtworkController {
-    public void insertDataToDB(int id) {
-        Artworks tempData = new Artworks();
+    public void insertDataToDB(int id, Artworks tempData) {
         DatabaseHandler conn = new DatabaseHandler();
         conn.connect();
 
