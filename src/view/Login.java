@@ -58,8 +58,9 @@ public class Login extends JFrame {
         buttonPanel.add(loginButton);
 
         loginButton.addActionListener(e -> {
-            c.checkLogin(emailField.getText(), passwordField.getText());
-            this.dispose();
+            if (c.checkLogin(emailField.getText(), passwordField.getText())) {
+                this.dispose();
+            }
         });
 
         add(title);
