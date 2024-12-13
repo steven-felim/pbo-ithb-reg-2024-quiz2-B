@@ -15,6 +15,10 @@ public class Artworks {
         this.user_id = user_id;
     }
 
+    public Artworks() {
+
+    }
+
     public int getId() {
         return id;
     }
