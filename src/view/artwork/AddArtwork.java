@@ -1,5 +1,6 @@
 package view.artwork;
 
+import controller.ArtworkController;
 import model.classes.Artworks;
 
 import javax.swing.*;
@@ -7,8 +8,11 @@ import java.awt.*;
 
 public class AddArtwork extends JFrame {
     private Artworks artworks;
+    private ArtworkController controller;
+
     public AddArtwork(int id) {
         artworks = new Artworks();
+        controller = new ArtworkController();
         initComponents(id);
         this.setVisible(true);
     }
@@ -64,7 +68,12 @@ public class AddArtwork extends JFrame {
         panel.add(submit);
 
         submit.addActionListener(e ->  {
-            // Sambungin ke DB, ada controller
+            artworks.setTitle(titleField.getText());
+            artworks.setDescription(descField.getText());
+            artworks.setImage_path(fcFoto.getSelectedFile().getAbsolutePath());
+            artworks.setUser_id(id);
+
+            controller.insertDataToDB(id);
         });
 
         this.add(title);

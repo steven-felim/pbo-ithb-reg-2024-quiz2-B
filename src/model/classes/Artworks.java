@@ -15,6 +15,13 @@ public class Artworks {
         this.user_id = user_id;
     }
 
+    public Artworks(String title, String description, String image_path, int user_id) {
+        this.title = title;
+        this.description = description;
+        this.image_path = image_path;
+        this.user_id = user_id;
+    }
+
     public Artworks() {
 
     }
