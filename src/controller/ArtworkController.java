@@ -6,9 +6,7 @@ import view.artwork.ArtworkMenu;
 
 import javax.swing.*;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.TimeZone;
 
 public class ArtworkController {

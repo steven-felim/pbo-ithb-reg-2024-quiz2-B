@@ -7,8 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class AddArtwork extends JFrame {
-    private Artworks artworks;
-    private ArtworkController controller;
+    private final Artworks artworks;
+    private final ArtworkController controller;
 
     public AddArtwork(int id) {
         artworks = new Artworks();
